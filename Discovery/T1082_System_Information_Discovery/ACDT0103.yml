@@ -1,0 +1,14 @@
+- name: Systeminfo Command Executed Possible Reconnaissance
+  id: ACDT0103
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: systeminfo.exe
+      privilege: User
+  description: This ability simulates executing systeminfo.exe to gather system information
+    as part of reconnaissance to trigger DT0317.
+  tactic: Discovery
+  technique:
+    id: T1082
+    name: System Information Discovery

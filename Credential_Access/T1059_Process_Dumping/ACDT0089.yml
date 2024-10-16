@@ -1,0 +1,14 @@
+- name: XORDump Usage Detected Possible Process Memory Dump
+  id: ACDT0089
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: xordump.exe
+      privilege: User
+  description: This ability simulates process memory dumping using xordump to trigger
+    DT0293.
+  tactic: Credential Access
+  technique:
+    id: T1059
+    name: Process Dumping

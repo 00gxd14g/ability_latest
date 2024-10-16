@@ -1,0 +1,14 @@
+- name: ProcDump Usage Detected Possible Process Dump Activity
+  id: ACDT0084
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: procdump.exe
+      privilege: User
+  description: This ability simulates using procdump.exe to perform process dump activities
+    to trigger DT0288.
+  tactic: Credential Access
+  technique:
+    id: T1059
+    name: Process Dumping

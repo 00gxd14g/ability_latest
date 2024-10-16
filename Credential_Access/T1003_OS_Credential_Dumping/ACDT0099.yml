@@ -1,0 +1,14 @@
+- name: Mimikatz Potentially Used To Dump Credentials From LSASS
+  id: ACDT0099
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: mimikatz.exe
+      privilege: Administrator
+  description: This ability simulates the use of mimikatz to dump credentials from
+    LSASS to trigger DT0310.
+  tactic: Credential Access
+  technique:
+    id: T1003
+    name: OS Credential Dumping

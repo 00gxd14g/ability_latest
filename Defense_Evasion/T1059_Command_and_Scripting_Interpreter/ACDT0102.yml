@@ -1,0 +1,15 @@
+- name: Suspicious Csrss.exe Process Detected With Unusual Security ID and Parent
+    Process
+  id: ACDT0102
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: csrss.exe
+      privilege: System
+  description: This ability simulates suspicious activity involving csrss.exe with
+    unusual security ID and parent process to trigger DT0315.
+  tactic: Defense Evasion
+  technique:
+    id: T1059
+    name: Command and Scripting Interpreter

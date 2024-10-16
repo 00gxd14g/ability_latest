@@ -1,0 +1,13 @@
+- name: Password Cracking With Hashcat
+  id: ACDT0086
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: hashcat.exe -m 1000 hash.txt
+      privilege: User
+  description: This ability simulates password cracking using hashcat to trigger DT0290.
+  tactic: Credential Access
+  technique:
+    id: T1110
+    name: Brute Force

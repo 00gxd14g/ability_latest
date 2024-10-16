@@ -1,0 +1,14 @@
+- name: Network Share Enumeration via Net Command
+  id: ACDT0072
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: net share
+      privilege: User
+  description: This ability simulates network share enumeration using the net command
+    to trigger DT0275.
+  tactic: Discovery
+  technique:
+    id: T1135
+    name: Network Share Discovery

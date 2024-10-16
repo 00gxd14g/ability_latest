@@ -1,0 +1,14 @@
+- name: Malicious Macro Detected on Word Document
+  id: ACDT0098
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: winword.exe /m malicious_macro
+      privilege: User
+  description: This ability simulates the detection of a malicious macro in a Word
+    document to trigger DT0305.
+  tactic: Execution
+  technique:
+    id: T1064
+    name: Scripting

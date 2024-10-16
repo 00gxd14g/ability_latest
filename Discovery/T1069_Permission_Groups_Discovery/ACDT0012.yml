@@ -1,0 +1,13 @@
+- name: Administrator Group Enumeration via Net Command
+  id: ACDT0012
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: net localgroup administrators
+      privilege: User
+  description: This ability simulates administrator group enumeration to trigger DT0270.
+  tactic: Discovery
+  technique:
+    id: T1069
+    name: Permission Groups Discovery

@@ -1,0 +1,14 @@
+- name: Clearing Windows Logs with Wevtutil
+  id: ACDT0023
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: wevtutil.exe cl System
+      privilege: Administrator
+  description: This ability simulates clearing Windows logs using wevtutil.exe to
+    trigger DT0261.
+  tactic: Defense Evasion
+  technique:
+    id: T1070
+    name: Indicator Removal on Host

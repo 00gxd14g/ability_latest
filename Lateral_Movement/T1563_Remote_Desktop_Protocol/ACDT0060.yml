@@ -1,0 +1,13 @@
+- name: RDP Session Hijacking via Tscon
+  id: ACDT0060
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: tscon.exe rdp-tcp#1 /dest:console
+      privilege: User
+  description: This ability simulates an RDP session hijack to trigger DT0241 in QRadar.
+  tactic: Lateral Movement
+  technique:
+    id: T1563
+    name: Remote Desktop Protocol

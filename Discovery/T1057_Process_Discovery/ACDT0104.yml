@@ -1,0 +1,14 @@
+- name: Tasklist Command Executed Possible Reconnaissance
+  id: ACDT0104
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: tasklist.exe
+      privilege: User
+  description: This ability simulates executing tasklist.exe to enumerate running
+    processes to trigger DT0318.
+  tactic: Discovery
+  technique:
+    id: T1057
+    name: Process Discovery

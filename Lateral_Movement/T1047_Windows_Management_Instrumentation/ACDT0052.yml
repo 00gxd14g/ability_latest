@@ -1,0 +1,13 @@
+- name: WMIExec VBS Script Detected
+  id: ACDT0052
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: cscript.exe script.vbs /shell
+      privilege: User
+  description: This ability simulates executing a WMIExec VBS script to trigger DT0294.
+  tactic: Lateral Movement
+  technique:
+    id: T1047
+    name: Windows Management Instrumentation

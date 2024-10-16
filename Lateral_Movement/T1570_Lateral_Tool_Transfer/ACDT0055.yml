@@ -1,0 +1,13 @@
+- name: Suspicious SSH Usage Possible RDP Tunneling
+  id: ACDT0055
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: ssh.exe -L 3389
+      privilege: User
+  description: This ability simulates using SSH for RDP tunneling to trigger DT0299.
+  tactic: Lateral Movement
+  technique:
+    id: T1570
+    name: Lateral Tool Transfer

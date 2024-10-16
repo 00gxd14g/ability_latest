@@ -1,0 +1,14 @@
+- name: Suspicious Certutil Command Usage Detected
+  id: ACDT0096
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: certutil.exe -decode -urlcache -decodehex -encode -exportPFX
+      privilege: User
+  description: This ability simulates suspicious usage of certutil.exe to trigger
+    DT0302.
+  tactic: Defense Evasion
+  technique:
+    id: T1140
+    name: Deobfuscate/Decode Files or Information

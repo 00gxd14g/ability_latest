@@ -1,0 +1,14 @@
+- name: Svchost Spawning Office Application
+  id: ACDT0057
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: svchost.exe && winword.exe
+      privilege: User
+  description: This ability simulates svchost spawning office applications to trigger
+    DT0301.
+  tactic: Defense Evasion
+  technique:
+    id: T1070
+    name: Indicator Removal on Host

@@ -1,0 +1,13 @@
+- name: Suspicious SSH Port Forwarding
+  id: ACDT0056
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: ssh.exe -R -L -D
+      privilege: User
+  description: This ability simulates SSH port forwarding to trigger DT0300.
+  tactic: Command and Control
+  technique:
+    id: T1572
+    name: Port Forwarding

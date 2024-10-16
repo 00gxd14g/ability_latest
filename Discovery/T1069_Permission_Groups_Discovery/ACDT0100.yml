@@ -1,0 +1,14 @@
+- name: Whoami Run As SYSTEM User Potential User Recon After Privilege Escalation
+  id: ACDT0100
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: whoami.exe /user
+      privilege: System
+  description: This ability simulates running the whoami command as SYSTEM user to
+    trigger DT0311.
+  tactic: Discovery
+  technique:
+    id: T1069
+    name: Permission Groups Discovery

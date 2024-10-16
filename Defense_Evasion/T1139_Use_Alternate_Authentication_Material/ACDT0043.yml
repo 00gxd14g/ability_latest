@@ -1,0 +1,13 @@
+- name: CertUtil With Decode Argument
+  id: ACDT0043
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: certutil -decode file.txt decoded.txt
+      privilege: User
+  description: This ability simulates using certutil to decode files to trigger DT0285.
+  tactic: Defense Evasion
+  technique:
+    id: T1139
+    name: Use Alternate Authentication Material

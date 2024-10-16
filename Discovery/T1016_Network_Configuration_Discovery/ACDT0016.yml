@@ -1,0 +1,14 @@
+- name: Firewall State Enumeration via Netsh
+  id: ACDT0016
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: netsh firewall show state
+      privilege: User
+  description: This ability simulates firewall state enumeration using netsh to trigger
+    DT0276.
+  tactic: Discovery
+  technique:
+    id: T1016
+    name: Network Configuration Discovery

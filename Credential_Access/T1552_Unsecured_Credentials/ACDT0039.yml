@@ -1,0 +1,14 @@
+- name: Cleartext Password Search Detected via Findstr
+  id: ACDT0039
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: findstr /si /password
+      privilege: User
+  description: This ability simulates using findstr.exe to search for cleartext passwords,
+    matching DT0280.
+  tactic: Credential Access
+  technique:
+    id: T1552
+    name: Unsecured Credentials

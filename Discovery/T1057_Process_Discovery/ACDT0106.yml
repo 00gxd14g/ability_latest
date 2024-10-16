@@ -1,0 +1,14 @@
+- name: qprocess Command Executed Possible Reconnaissance
+  id: ACDT0106
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: qprocess.exe
+      privilege: User
+  description: This ability simulates executing qprocess.exe to list processes on
+    a system as part of reconnaissance to trigger DT0320.
+  tactic: Discovery
+  technique:
+    id: T1057
+    name: Process Discovery

@@ -1,0 +1,14 @@
+- name: Nltest Command Executed For Domain Trust Discovery
+  id: ACDT0088
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: nltest /domain_trusts /all_trusts
+      privilege: User
+  description: This ability simulates using nltest.exe to discover domain trusts to
+    trigger DT0292.
+  tactic: Discovery
+  technique:
+    id: T1482
+    name: Domain Trust Discovery

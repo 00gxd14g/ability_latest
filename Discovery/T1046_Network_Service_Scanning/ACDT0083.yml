@@ -1,0 +1,14 @@
+- name: Zenmap Tool Executed On Systems
+  id: ACDT0083
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: zenmap.exe
+      privilege: User
+  description: This ability simulates executing the Zenmap tool on a system to trigger
+    DT0287.
+  tactic: Discovery
+  technique:
+    id: T1046
+    name: Network Service Scanning

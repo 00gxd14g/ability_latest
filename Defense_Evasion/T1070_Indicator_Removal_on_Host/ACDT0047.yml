@@ -1,0 +1,13 @@
+- name: File Get Hidden via Attrib.exe Process
+  id: ACDT0047
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: attrib +h file.txt
+      privilege: User
+  description: This ability simulates hiding a file using attrib.exe to trigger DT0289.
+  tactic: Defense Evasion
+  technique:
+    id: T1070
+    name: Indicator Removal on Host

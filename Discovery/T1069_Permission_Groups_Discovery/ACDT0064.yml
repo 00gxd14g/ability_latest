@@ -1,0 +1,14 @@
+- name: Privilege Enumeration with Whoami
+  id: ACDT0064
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: whoami /priv
+      privilege: User
+  description: This ability simulates privilege enumeration using the whoami command
+    to trigger DT0265.
+  tactic: Discovery
+  technique:
+    id: T1069
+    name: Permission Groups Discovery

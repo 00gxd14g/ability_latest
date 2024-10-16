@@ -1,0 +1,14 @@
+- name: Certutil exe Certificate Extraction
+  id: ACDT0042
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: certutil -exportpfx
+      privilege: User
+  description: This ability simulates certificate extraction using certutil.exe to
+    trigger DT0284.
+  tactic: Credential Access
+  technique:
+    id: T1553
+    name: Credentials from Password Stores

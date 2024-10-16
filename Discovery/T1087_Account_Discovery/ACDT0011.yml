@@ -1,0 +1,14 @@
+- name: Administrator Account Enumeration via Net Command
+  id: ACDT0011
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: net user administrator
+      privilege: User
+  description: This ability simulates administrator account enumeration via net command
+    to trigger DT0269.
+  tactic: Discovery
+  technique:
+    id: T1087
+    name: Account Discovery

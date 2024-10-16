@@ -1,0 +1,14 @@
+- name: User Groups Enumeration with Whoami via Powershell
+  id: ACDT0009
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: whoami /all
+      privilege: User
+  description: This ability simulates enumeration of all user groups using whoami
+    to trigger DT0267.
+  tactic: Discovery
+  technique:
+    id: T1069
+    name: Permission Groups Discovery

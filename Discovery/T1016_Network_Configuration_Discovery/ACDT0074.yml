@@ -1,0 +1,14 @@
+- name: Firewall Config Enumeration via Netsh
+  id: ACDT0074
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: netsh firewall show config
+      privilege: User
+  description: This ability simulates firewall configuration enumeration using netsh
+    to trigger DT0277.
+  tactic: Discovery
+  technique:
+    id: T1016
+    name: Network Configuration Discovery

@@ -1,0 +1,14 @@
+- name: Whoami Command Executed on Systems
+  id: ACDT0107
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: whoami.exe
+      privilege: User
+  description: This ability simulates executing whoami.exe to identify the current
+    user on a system to trigger DT0323.
+  tactic: Discovery
+  technique:
+    id: T1033
+    name: System Owner/User Discovery

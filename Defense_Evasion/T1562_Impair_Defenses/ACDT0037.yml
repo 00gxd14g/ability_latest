@@ -1,0 +1,14 @@
+- name: Firewall Disable via Netsh Command
+  id: ACDT0037
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: netsh set opmode disable
+      privilege: Administrator
+  description: This ability simulates disabling the firewall via netsh to trigger
+    DT0278.
+  tactic: Defense Evasion
+  technique:
+    id: T1562
+    name: Impair Defenses

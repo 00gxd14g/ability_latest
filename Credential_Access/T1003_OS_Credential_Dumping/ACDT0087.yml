@@ -1,0 +1,14 @@
+- name: Lsass Dump Activity Detected via Outflank-Dumpert Tool
+  id: ACDT0087
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: outflank-dumpert.exe
+      privilege: User
+  description: This ability simulates dumping lsass memory using outflank-dumpert
+    to trigger DT0291.
+  tactic: Credential Access
+  technique:
+    id: T1003
+    name: OS Credential Dumping

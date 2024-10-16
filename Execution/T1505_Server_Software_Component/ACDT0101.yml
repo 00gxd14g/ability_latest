@@ -1,0 +1,14 @@
+- name: Web Shell Detected With Suspicious Child Process
+  id: ACDT0101
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: cmd.exe /c powershell.exe -ExecutionPolicy Bypass -File malicious_script.ps1
+      privilege: User
+  description: This ability simulates a web shell invoking a suspicious child process
+    to trigger DT0313.
+  tactic: Execution
+  technique:
+    id: T1505
+    name: Server Software Component

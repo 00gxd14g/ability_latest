@@ -1,0 +1,14 @@
+- name: DNS Tunnel Detected via Muddywater Actor
+  id: ACDT0006
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: powershell.exe -ExecutionPolicy Bypass -Command "Import-Module Dataexchange.dll"
+      privilege: User
+  description: This ability simulates DNS tunneling through PowerShell to trigger
+    DT0264.
+  tactic: Command and Control
+  technique:
+    id: T1071
+    name: Application Layer Protocol

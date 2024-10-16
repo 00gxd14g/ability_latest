@@ -1,0 +1,14 @@
+- name: Shadow Copy Deletion via Vssadmin
+  id: ACDT0005
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: vssadmin.exe delete shadows /all
+      privilege: Administrator
+  description: This ability simulates shadow copy deletion via vssadmin.exe to trigger
+    DT0262.
+  tactic: Impact
+  technique:
+    id: T1490
+    name: Inhibit System Recovery

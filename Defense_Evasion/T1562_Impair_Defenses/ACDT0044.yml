@@ -1,0 +1,14 @@
+- name: Detecting Tampering of Windows Defender Command Prompt
+  id: ACDT0044
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: sc.exe config stop query
+      privilege: User
+  description: This ability simulates tampering with Windows Defender through sc.exe
+    to trigger DT0286.
+  tactic: Defense Evasion
+  technique:
+    id: T1562
+    name: Impair Defenses

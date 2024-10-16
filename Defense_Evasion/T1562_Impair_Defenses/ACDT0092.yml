@@ -1,0 +1,14 @@
+- name: Conhost.exe CommandLine Path Traversal
+  id: ACDT0092
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: conhost.exe /../../
+      privilege: User
+  description: This ability simulates command line path traversal using conhost.exe
+    to trigger DT0298.
+  tactic: Defense Evasion
+  technique:
+    id: T1562
+    name: Impair Defenses

@@ -1,0 +1,14 @@
+- name: Network Recon via Route Command
+  id: ACDT0070
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: route print
+      privilege: User
+  description: This ability simulates network route enumeration via the route command
+    to trigger DT0271.
+  tactic: Discovery
+  technique:
+    id: T1016
+    name: Network Configuration Discovery

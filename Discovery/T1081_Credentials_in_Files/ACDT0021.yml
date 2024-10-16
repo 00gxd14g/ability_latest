@@ -1,0 +1,14 @@
+- name: Enumeration to Encrypted Password File via Findstr
+  id: ACDT0021
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: findstr /i cpassword c:\sysvol\*.xml
+      privilege: User
+  description: This ability simulates using findstr.exe to search for encrypted passwords
+    in XML files, matching DT0235.
+  tactic: Discovery
+  technique:
+    id: T1081
+    name: Credentials in Files

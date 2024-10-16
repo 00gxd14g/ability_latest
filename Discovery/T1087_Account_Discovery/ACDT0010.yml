@@ -1,0 +1,13 @@
+- name: SID Reconnaissance via WMIC
+  id: ACDT0010
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: wmic useraccount get name,sid
+      privilege: User
+  description: This ability simulates SID reconnaissance via WMIC to trigger DT0268.
+  tactic: Discovery
+  technique:
+    id: T1087
+    name: Account Discovery

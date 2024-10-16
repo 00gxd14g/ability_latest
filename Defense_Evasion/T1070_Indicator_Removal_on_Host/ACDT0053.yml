@@ -1,0 +1,13 @@
+- name: CleanWipe Usage Detected
+  id: ACDT0053
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: CleanWipe.exe
+      privilege: User
+  description: This ability simulates using the CleanWipe tool to trigger DT0297.
+  tactic: Defense Evasion
+  technique:
+    id: T1070
+    name: Indicator Removal on Host

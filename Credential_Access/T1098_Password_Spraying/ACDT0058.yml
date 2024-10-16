@@ -1,0 +1,14 @@
+- name: Password Spraying Attempts Using Dsacls
+  id: ACDT0058
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: dsacls.exe /user
+      privilege: User
+  description: This ability simulates password spraying using dsacls.exe to trigger
+    DT0229 in QRadar SIEM.
+  tactic: Credential Access
+  technique:
+    id: T1098
+    name: Password Spraying

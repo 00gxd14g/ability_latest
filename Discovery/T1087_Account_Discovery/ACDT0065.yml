@@ -1,0 +1,14 @@
+- name: User Enumeration via Net User
+  id: ACDT0065
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: net user
+      privilege: User
+  description: This ability simulates user enumeration using the net user command
+    to trigger DT0266.
+  tactic: Discovery
+  technique:
+    id: T1087
+    name: Account Discovery

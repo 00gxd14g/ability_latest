@@ -1,0 +1,14 @@
+- name: Firewall Disable via Advfirewall
+  id: ACDT0019
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: netsh advfirewall set allprofiles state off
+      privilege: Administrator
+  description: This ability simulates disabling firewall profiles using netsh advfirewall
+    to trigger DT0279.
+  tactic: Defense Evasion
+  technique:
+    id: T1562
+    name: Impair Defenses

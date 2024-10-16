@@ -1,0 +1,14 @@
+- name: Netstat Command Executed Possible Network Reconnaissance
+  id: ACDT0105
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: netstat.exe -an
+      privilege: User
+  description: This ability simulates executing netstat.exe to gather network connection
+    information to trigger DT0319.
+  tactic: Discovery
+  technique:
+    id: T1049
+    name: System Network Connections Discovery

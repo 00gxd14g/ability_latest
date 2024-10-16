@@ -1,0 +1,14 @@
+- name: Suspicious Rundll32 Activity Invoking Sys File
+  id: ACDT0097
+  platforms:
+    windows:
+      executor:
+        name: cmd
+        command: rundll32.exe kernel32.dll, LoadLibrary mydriver.sys
+      privilege: User
+  description: This ability simulates suspicious activity using rundll32.exe to invoke
+    a .sys file to trigger DT0303.
+  tactic: Execution
+  technique:
+    id: T1218
+    name: System Binary Proxy Execution
